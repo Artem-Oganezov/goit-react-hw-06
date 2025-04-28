@@ -8,15 +8,15 @@ const slice = createSlice({
   name: 'contacts',
   initialState,
   reducers: {
-    addFriend: (state, action) => {
+    addContact: (state, action) => {
       state.items.push(action.payload);
     },
-    deleteFriend: (state, action) => {
+    deleteContact: (state, action) => {
       state.items = state.items.filter(item => item.id !== action.payload);
     },
   },
 });
 
-export const { addFriend, deleteFriend } = slice.actions;
+export const { addContact, deleteContact } = slice.actions;
 
-export const contactsSlice = slice.reducer;
+export const contactsReducer = slice.reducer;

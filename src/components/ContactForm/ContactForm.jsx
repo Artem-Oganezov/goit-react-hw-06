@@ -3,7 +3,7 @@ import * as Yup from 'yup';
 import s from './ContactForm.module.css';
 import { nanoid } from '@reduxjs/toolkit';
 import { useDispatch } from 'react-redux';
-import { addFriend } from '../../redux/contactsSlice';
+import { addContact } from '../../redux/contactsSlice';
 
 const ContactForm = () => {
   const dispatch = useDispatch();
@@ -14,7 +14,7 @@ const ContactForm = () => {
       name: values.name,
       number: values.number,
     };
-    dispatch(addFriend(addTasks));
+    dispatch(addContact(addTasks));
 
     options.resetForm();
   };

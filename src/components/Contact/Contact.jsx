@@ -2,7 +2,7 @@ import { MdPhoneInTalk } from 'react-icons/md';
 import s from './Contact.module.css';
 import { FaRegUser } from 'react-icons/fa';
 import { useDispatch } from 'react-redux';
-import { deleteFriend } from '../../redux/contactsSlice';
+import { deleteContact } from '../../redux/contactsSlice';
 
 const Contact = ({ id, name, number }) => {
   const dispatch = useDispatch();
@@ -16,7 +16,7 @@ const Contact = ({ id, name, number }) => {
         <MdPhoneInTalk />
         {number}
       </p>
-      <button className={s.button} onClick={() => dispatch(deleteFriend(id))}>
+      <button className={s.button} onClick={() => dispatch(deleteContact(id))}>
         Delete
       </button>
     </li>
